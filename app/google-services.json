@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1045016139985",
+    "firebase_url": "https://restofinder-a3a1e-default-rtdb.firebaseio.com",
+    "project_id": "restofinder-a3a1e",
+    "storage_bucket": "restofinder-a3a1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045016139985:android:9079f3a5c49e0203b68df0",
+        "android_client_info": {
+          "package_name": "com.myapp.restofinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045016139985-lvnngrvg1dc7h73mctgq5hu0cfi2vq9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapp.restofinder",
+            "certificate_hash": "43a9ed23d6ab12b62f8159d83d96e1d481d00478"
+          }
+        },
+        {
+          "client_id": "1045016139985-m2v9av46c6q76nb35j22qv8el0retemj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2sO7_IvYcYlVoonzgV7GFTu2oALAUyOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045016139985-m2v9av46c6q76nb35j22qv8el0retemj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/describe_your_experience"
+        android:minLines="3"
+        android:maxLines="6"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:id="@+id/comment_et"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"/>
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srb_minimumStars="1"
+        android:layout_gravity="center"
+        app:srb_starWidth="23dp"
+        app:srb_starHeight="23dp"
+        app:srb_starPadding="5dp"
+        app:srb_stepSize="1"
+        app:srb_isIndicator="false"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/ic_empty_star"
+        app:srb_scrollable="true" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_review_btn"
+        android:text="@string/add_review"/>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Resto Finder</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_coount">don\'t have an coount?</string>
+    <string name="signup">signup</string>
+    <string name="full_name">Full name</string>
+    <string name="have_account">already have an account?</string>
+    <string name="signout">signout</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="top_recipes">Top recipes</string>
+    <string name="title_activity_restaurant">RestaurantActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="comments">Comments</string>
+    <string name="recipes">Recipes</string>
+    <string name="add_review">Add Review</string>
+    <string name="describe_your_experience">Describe your experience…</string>
+    <string name="add_restaurant">Add restaurant</string>
+    <string name="restaurant_name">Restaurant name</string>
+    <string name="description">Description</string>
+    <string name="phone">Phone</string>
+    <string name="save">Save</string>
+    <string name="recipes_list">Recipes List</string>
+    <string name="add_recipe">Add recipe</string>
+    <string name="recipe_name">Recipe name</string>
+    <string name="price">Price</string>
+</resources>
