@@ -54,7 +54,7 @@ public class Statics {
     public static void setImage(String key, ImageView image, OnFinishedLoadingImage callback) {
         final long ONE_MEGA = 1024 * 1024;
         FirebaseStorage.getInstance().getReference().child(key).getBytes(ONE_MEGA).addOnSuccessListener(bytes -> {
-            File file = new File(Environment.getDownloadCacheDirectory().getPath() + File.separator + new Date().toString());
+            File file = new File(image.getContext().getCacheDir() + File.separator + key.split("/")[0]);
 
             try {
                 file.createNewFile();
