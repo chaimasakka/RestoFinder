@@ -22,9 +22,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
-        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 300);
-        
         SharedPreferences prefs = getSharedPreferences("default", Context.MODE_PRIVATE);
         if (prefs.contains("user")) {
             Statics.USER = new Gson().fromJson(prefs.getString("user", null), User.class);

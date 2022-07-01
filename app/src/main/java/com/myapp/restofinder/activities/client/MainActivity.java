@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     final private DatabaseReference database = FirebaseDatabase.getInstance().getReference();
     private ListView restaurantsLV;
     private RestoListAdapter adapter;
-    private List<Restaurant> restaurants = new ArrayList<Restaurant>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Iterator<DataSnapshot> data = snapshot.getChildren().iterator();
                 Map<String, Object> map = new HashMap<>();
-                map.put("id", snapshot.getKey());
+                    map.put("id", snapshot.getKey());
                 while (data.hasNext()) {
                     DataSnapshot snap = data.next();
                     if (!snap.getKey().equals("recipes"))
@@ -84,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 adapter.addRestaurant(new Restaurant(map));
+                Statics.justifyListViewHeightBasedOnChildren(restaurantsLV);
             }
 
             @Override

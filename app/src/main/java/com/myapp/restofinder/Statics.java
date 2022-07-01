@@ -1,10 +1,5 @@
 package com.myapp.restofinder;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Environment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -12,17 +7,13 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.myapp.restofinder.listeners.OnFinishedLoadingImage;
+import com.myapp.restofinder.listeners.OnFinishedLoadingImageListener;
 import com.myapp.restofinder.models.User;
 import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.FileSystem;
-import java.util.Date;
 
 public class Statics {
     public static User USER;
@@ -51,11 +42,10 @@ public class Statics {
         listView.requestLayout();
     }
 
-    public static void setImage(String key, ImageView image, OnFinishedLoadingImage callback) {
+    public static void setImage(String key, ImageView image, OnFinishedLoadingImageListener callback) {
         final long ONE_MEGA = 1024 * 1024;
         FirebaseStorage.getInstance().getReference().child(key).getBytes(ONE_MEGA).addOnSuccessListener(bytes -> {
-            File file = new File(image.getContext().getCacheDir() + File.separator + key.split("/")[0]);
-
+            File file = new File(image.getContext().getCacheDir() + File.separator + key.split("/")[1]);
             try {
                 file.createNewFile();
                 FileOutputStream fos = new FileOutputStream(file);
@@ -66,8 +56,6 @@ public class Statics {
                 Toast.makeText(image.getContext(), e.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
 
-            /*Bitmap bmp = BitmapFactory.decodeByteArray(file, 0, file.length);
-            image.setImageBitmap(Bitmap.createBitmap(bmp));*/
             if (callback != null)
                 callback.onFinished();
 

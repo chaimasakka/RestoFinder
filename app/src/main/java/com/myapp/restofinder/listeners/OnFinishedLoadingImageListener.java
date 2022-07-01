@@ -1,5 +1,5 @@
 package com.myapp.restofinder.listeners;
 
-public interface OnFinishedLoadingImage {
+public interface OnFinishedLoadingImageListener {
     void onFinished();
 }
